@@ -46,6 +46,12 @@
   font-weight: 900;
 }
 
+@media (max-width: 992px) {
+  .intro {
+    padding-top: 155px;
+  }
+}
+
 @media (max-width: 576px) {
   .intro__subtitle {
     font-size: 18px;
