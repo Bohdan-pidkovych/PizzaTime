@@ -62,7 +62,7 @@
 
 .main-header__menu-link:hover::before {
   opacity: 1;
-  transition: all 0.2s;
+  transition: opacity 0.2s;
 }
 
 .main-header__menu-text {
