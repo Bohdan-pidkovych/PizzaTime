@@ -5,6 +5,31 @@
   padding: 0 15px;
 }
 
+.page-section {
+  padding: 110px 0;
+}
+
+@media (max-width: 576px) {
+  .page-section {
+    padding: 90px 0;
+  }
+}
+
+.section__title {
+  margin: 0 auto;
+  margin-bottom: 40px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 48px;
+  font-weight: 900;
+}
+
+@media (max-width: 576px) {
+  .section__title {
+    font-size: 36px;
+  }
+}
+
 .button {
   display: inline-block;
   width: 240px;
