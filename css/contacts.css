@@ -1,5 +1,27 @@
+.contacts {
+  overflow: hidden;
+}
+
+.contacts__container {
+  position: relative;
+}
+
+.contacts__container::before {
+  content: "";
+  position: absolute;
+  right: -350px;
+  bottom: -100px;
+  width: 672px;
+  height: 397px;
+  background-image: url("../images/section-contacts/tomatoes.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .contacts__main {
+  position: relative;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -14,7 +36,7 @@
   padding-left: 30px;
 }
 
-.contacts__item {
+.contacts__item:not(:last-child) {
   margin-bottom: 35px;
 }
 
@@ -40,4 +62,99 @@
 
 .contacts__phone:hover {
   color: #ffa650;
+}
+
+.social-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.social-list__link {
+  display: flex;
+}
+
+.social-list__icon {
+  width: 35px;
+  height: 35px;
+  fill: #ffa650;
+  transition: fill 0.2s, opacity 0.2s;
+}
+
+.social-list__icon--vk:hover {
+  fill: #5078a5;
+}
+
+.social-list__icon--fb:hover {
+  fill: #3e58a1;
+}
+
+.social-list__icon--ig:hover {
+  fill: #e6369c;
+}
+
+.social-list__icon:active {
+  opacity: 0.7;
+}
+
+.social-list__icon:not(.social-list__icon--ig) path {
+  fill: #ffffff;
+}
+
+@media (max-width: 1800px) {
+  .contacts__container::before {
+    right: -250px;
+  }
+}
+
+@media (max-width: 1600px) {
+  .contacts__container::before {
+    right: -200px;
+    bottom: -175px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .contacts__container::before {
+    content: none;
+  }
+}
+
+@media (max-width: 992px) {
+  .contacts__map {
+    height: 350px;
+  }
+}
+
+@media (max-width: 767px) {
+  .contacts {
+    padding-bottom: 0;
+  }
+
+  .contacts__container {
+    padding: 0;
+  }
+
+  .contacts__map {
+    order: 1;
+    width: 100%;
+    height: 300px;
+  }
+
+  .contacts__list {
+    width: 100%;
+    margin-bottom: 40px;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .social-list {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .social-list__icon {
+    width: 45px;
+    height: 45px;
+  }
 }
