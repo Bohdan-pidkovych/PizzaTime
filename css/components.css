@@ -140,3 +140,54 @@
     font-size: 20px;
   }
 }
+
+.order {
+  max-width: 310px;
+}
+
+.order__image {
+  display: block;
+  width: 186px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.order__title {
+  margin: 0;
+  margin-bottom: 5px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+}
+
+.order__size {
+  margin: 0;
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  color: #a2a2a2;
+}
+
+.form__input {
+  display: block;
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 20px 28px;
+  border: 2px solid transparent;
+  border-radius: 32px;
+  background-color: #f7f7f7;
+  outline: none;
+}
+
+.form__input:focus {
+  border-color: #ffa650;
+}
+
+.form__button {
+  width: 100%;
+  padding: 22px 28px;
+  border-radius: 50px;
+  background-color: #ffa650;
+  box-shadow: none;
+}
