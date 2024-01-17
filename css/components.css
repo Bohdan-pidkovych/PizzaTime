@@ -142,7 +142,7 @@
 }
 
 .order {
-  max-width: 310px;
+  width: 310px;
 }
 
 .order__image {
@@ -157,6 +157,7 @@
   margin-bottom: 5px;
   text-align: center;
   font-family: "Montserrat", sans-serif;
+  font-size: 22px;
   font-weight: 900;
 }
 
@@ -165,6 +166,7 @@
   margin-bottom: 30px;
   text-align: center;
   font-family: "Montserrat", sans-serif;
+  font-size: 18px;
   font-weight: 900;
   color: #a2a2a2;
 }
