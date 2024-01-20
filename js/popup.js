@@ -1,6 +1,17 @@
 (()=>{
   const body = document.querySelector('body');
 
+  const getClosesClassName = (item, className)=>{
+    let node = item;
+    while(node) {
+      if (node.classList.contains(className)) {
+        return node;
+      }
+      node = node.parentElement;
+    }
+    return null;
+  };
+
   const getClosesAttribute = (item, attr)=>{
     let node = item;
     while(node) {
@@ -35,6 +46,15 @@
     const popup = document.querySelector('.' + popupClass);
     if (popup) {
       showPopup(popup);
+      toggleScroll();
+    }
+  });
+
+  body.addEventListener('click', (evt)=>{
+    let target = evt.target;
+    if (target.classList.contains('popup__button-close') || target.classList.contains('popup__main')) {
+      let popup = getClosesClassName(target, 'popup');
+      closePopup(popup);
       toggleScroll();
     }
   });
