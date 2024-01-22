@@ -1,5 +1,6 @@
 :root {
   scroll-behavior: smooth;
+  scroll-padding-top: var(--scroll-padding, 59px);
 }
 
 *, *::before, *::after {

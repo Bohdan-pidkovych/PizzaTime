@@ -52,7 +52,7 @@
 
   body.addEventListener('click', (evt)=>{
     let target = evt.target;
-    if (target.classList.contains('popup__button-close') || target.classList.contains('popup__main')) {
+    if (target.classList.contains('popup-close') || target.classList.contains('popup__main')) {
       let popup = getClosesClassName(target, 'popup');
       closePopup(popup);
       toggleScroll();
