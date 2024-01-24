@@ -61,21 +61,21 @@
           <h2 class="catalog__title section-title">Меню</h2>
           <ul class="catalog__sort-list">
             <li class="catalog__sort-item">
-              <button class="catalog__sort-button catalog__sort-button--active" type="button">всі</button>
+              <button class="catalog__sort-button catalog__sort-button--active" type="button" data-filter="all">всі</button>
             </li>
             <li class="catalog__sort-item">
-              <button class="catalog__sort-button" type="button">грибні</button>
+              <button class="catalog__sort-button" type="button" data-filter="mushrooms">грибні</button>
             </li>
             <li class="catalog__sort-item">
-              <button class="catalog__sort-button" type="button">м'ясні</button>
+              <button class="catalog__sort-button" type="button" data-filter="meat">м'ясні</button>
             </li>
             <li class="catalog__sort-item">
-              <button class="catalog__sort-button" type="button">сирні</button>
+              <button class="catalog__sort-button" type="button" data-filter="cheese">сирні</button>
             </li>
           </ul>
         </header>
         <ul class="catalog__list">
-          <li class="catalog__item product">
+          <li class="catalog__item product" data-category="meat">
             <img class="product__image" src="images/section-catalog/1.png" alt="Піца з салямі">
             <div class="product__info">
               <h3 class="product__title">Салямі</h3>
@@ -99,7 +99,7 @@
               </div>
             </div>
           </li>
-          <li class="catalog__item product">
+          <li class="catalog__item product" data-category="meat">
             <img class="product__image" src="images/section-catalog/2.png" alt="Піца-хіт">
             <div class="product__info">
               <h3 class="product__title">Хіт</h3>
@@ -123,7 +123,7 @@
               </div>
             </div>
           </li>
-          <li class="catalog__item product">
+          <li class="catalog__item product" data-category="mushrooms">
             <img class="product__image" src="images/section-catalog/3.png" alt="Піца з шинкою та грибами">
             <div class="product__info">
               <h3 class="product__title">З шинкою та грибами</h3>
@@ -147,7 +147,7 @@
               </div>
             </div>
           </li>
-          <li class="catalog__item product">
+          <li class="catalog__item product" data-category="cheese">
             <img class="product__image" src="images/section-catalog/4.png" alt="Піца Карбонара">
             <div class="product__info">
               <h3 class="product__title">Карбонара</h3>
@@ -171,7 +171,7 @@
               </div>
             </div>
           </li>
-          <li class="catalog__item product">
+          <li class="catalog__item product" data-category="cheese">
             <img class="product__image" src="images/section-catalog/5.png" alt="Фірмова піца">
             <div class="product__info">
               <h3 class="product__title">Фірмова</h3>
@@ -195,7 +195,7 @@
               </div>
             </div>
           </li>
-          <li class="catalog__item product">
+          <li class="catalog__item product" data-category="meat">
             <img class="product__image" src="images/section-catalog/6.png" alt="Піца Асорті">
             <div class="product__info">
               <h3 class="product__title">Асорті</h3>
@@ -219,7 +219,7 @@
               </div>
             </div>
           </li>
-          <li class="catalog__item product">
+          <li class="catalog__item product" data-category="meat">
             <img class="product__image" src="images/section-catalog/7.png" alt="Піца Л-01">
             <div class="product__info">
               <h3 class="product__title">Л-01</h3>
@@ -243,7 +243,7 @@
               </div>
             </div>
           </li>
-          <li class="catalog__item product">
+          <li class="catalog__item product" data-category="cheese">
             <img class="product__image" src="images/section-catalog/8.png" alt="Піца Три сири">
             <div class="product__info">
               <h3 class="product__title">Три сири</h3>
@@ -267,7 +267,7 @@
               </div>
             </div>
           </li>
-          <li class="catalog__item product">
+          <li class="catalog__item product" data-category="meat">
             <img class="product__image" src="images/section-catalog/9.png" alt="М'ясна піца">
             <div class="product__info">
               <h3 class="product__title">М'ясна</h3>
@@ -483,5 +483,6 @@
   </div>
   <script src="js/page-header.js"></script>
   <script src="js/popup.js"></script>
+  <script src="js/filter.js"></script>
 </body>
 </html>
