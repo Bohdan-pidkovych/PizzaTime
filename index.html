@@ -307,7 +307,7 @@
       <div class="contacts__container container">
         <h2 class="contacts__title section-title">Контакти</h2>
         <div class="contacts__main">
-          <div class="contacts__map">
+          <div class="contacts__map" id="map">
             <img class="contacts__map-image" src="#" alt="м. Київ, вул. Вірменська, 3">
           </div>
           <ul class="contacts__list">
@@ -433,14 +433,14 @@
           <div class="popup__order order">
             <img class="order__image" src="images/section-catalog/1.png" alt="Піца Салямі">
             <h3 class="order__title">
-              <span>Салямі</span>
-              <span>850 грн</span>
+              <span class="order__product-title">Салямі</span>
+              <span class="order__product-price">850 грн</span>
             </h3>
             <p class="order__size">35 см</p>
             <form class="order__form form" action="#" method="post">
-              <input type="hidden" name="pizza">
-              <input type="hidden" name="price">
-              <input type="hidden" name="size">
+              <input class="order__info-title" type="hidden" name="pizza">
+              <input class="order__info-price" type="hidden" name="price">
+              <input class="order__info-size" type="hidden" name="size">
               <input class="form__input" type="text" name="buyer-name" placeholder="Ім'я" required>
               <input class="form__input" type="tel" name="buyer-phone" placeholder="Телефон" required>
               <input class="form__input" type="text" name="buyer-address" placeholder="Адреса" required>
@@ -485,5 +485,7 @@
   <script src="js/popup.js"></script>
   <script src="js/filter.js"></script>
   <script src="js/product.js"></script>
+  <script src="js/map.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5BRjjb_YdmtgdfZQm1q8lcZicsmwj0i4&callback=initMap" async="" defer=""></script>
 </body>
 </html>

@@ -29,12 +29,21 @@
     const productSize = product.querySelector('.product__size--active').textContent;
     const productPrice = product.querySelector('.product__price-value').textContent;
     const productImage = product.querySelector('.product__image').getAttribute('src');
+
+    order.querySelector('.order__info-title').setAttribute('value', productTitle);
+    order.querySelector('.order__info-price').setAttribute('value', productPrice);
+    order.querySelector('.order__info-size').setAttribute('value', productSize);
+
+    order.querySelector('.order__product-title').textContent = productTitle;
+    order.querySelector('.order__product-price').textContent = productPrice;
+    order.querySelector('.order__size').textContent = productSize;
+    order.querySelector('.order__image').setAttribute('src', productImage);
   };
 
   catalog.addEventListener('click', (evt)=>{
     let target = evt.target;
 
-    if (target.classList.contains('product__size')) {
+    if (target.classList.contains('product__size') && !target.classList.contains('product__size--active')) {
       evt.preventDefault();
       changeProductSize(target);
     }
