@@ -5,8 +5,16 @@ if ($method !== 'POST') {
 }
 
 $project_name = 'PizzaTime';
-$admin_email = 'bogdan.pidkovych@gmail.com';
+$admin_email = 'admin@gmail.com';
 $form_subject = 'Замовлення з сайту PizzaTime';
-$message = '';
+$message = '
+<table style="width: 100%;">
+  <tr>
+    <td style="padding: 10px; border: 1px solid #e9e9e9">Name</td>
+  </tr>
+</table>';
+$headers[] = 'MIME-Version: 1.0';
+$headers[] = 'Content-type: text/html; charset=utf-8';
 
-mail($admin_email, $form_subject, $message, $headers);
+mail($admin_email, $form_subject, $message, implode("\r\n", $headers));
+?>
