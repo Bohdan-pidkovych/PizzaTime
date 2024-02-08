@@ -5,6 +5,7 @@
   }
 
   const formSend = (form)=> {
+    const data = 'name=value&name2-value2';
     const xhr = new XMLHttpRequest();
     const url = 'mail.mail.php';
 
@@ -13,7 +14,7 @@
     xhr.onload = ()=>{
 
     };
-    xhr.send();
+    xhr.send(data);
   }
 
   for (let i = 0; i < forms.length; i++) {
