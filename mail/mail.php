@@ -15,11 +15,11 @@ foreach ($_POST as $key => $value) {
     continue;
   }
   $color = $color_counter % 2 === 0 ? '#ffffff' : '#f8f8f8';
-  $message .= "
+  $message .= '
     <tr style="background-color: $color;">
       <td style="padding: 10px; border: 1px solid #e9e9e9;">$key</td>
       <td style="padding: 10px; border: 1px solid #e9e9e9;">$value</td>
-    </tr>";
+    </tr>';
   $color_counter++;
 }
 
@@ -28,5 +28,11 @@ $headers[] = 'MIME-Version: 1.0';
 $headers[] = 'Content-type: text/html; charset=utf-8';
 $headers[] = 'From: <admin@gmail.com>';
 
-mail($admin_email, $form_subject, $message, implode("\r\n", $headers));
+$success_send = mail($admin_email, $form_subject, $message, implode("\r\n", $headers));
+
+if ($success_send) {
+  echo 'success';
+} else {
+  echo 'error';
+}
 ?>

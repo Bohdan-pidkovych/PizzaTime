@@ -15,11 +15,18 @@
     return null;
   };
 
+  const updateProductPrice = (product, price)=>{
+    const productPrice = product.querySelector('.product__price-value');
+    productPrice.textContent = price + ' грн';
+  };
+
   const changeProductSize = (target)=>{
     let product = getClosesClassName(target, 'product');
     const previousActiveButton = product.querySelector('.product__size--active');
+    const newPrice = target.getAttribute('data-product-size-price');
     previousActiveButton.classList.remove('product__size--active');
     target.classList.add('product__size--active');
+    updateProductPrice(product, newPrice);
   };
 
   const changeProductOrder = (target)=>{
